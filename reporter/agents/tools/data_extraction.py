@@ -1,6 +1,6 @@
 from crewai.tools import BaseTool
 from pydantic import BaseModel, Field, ConfigDict
-from src.connection.jira_connection import JiraConnectionManager
+from reporter.connection.jira_connection import JiraConnectionManager
 
 import pandas as pd
 import os
@@ -277,7 +277,7 @@ class JiraDataExtraction(BaseTool):
         except Exception:
             return []
 
-    def __create_board_overview(self, parent_issues, base_path="jira-weekly-data"):
+    def __create_board_overview(self, parent_issues, base_path="jira_weekly_data"):
         """Create a pandas DataFrame from parent and child issues and save it as CSV"""
         cleaned_issues = []
 

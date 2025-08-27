@@ -20,7 +20,7 @@ class JiraDataProcessing(BaseTool):
     start_date: str = Field(default=None, description="Start date to be filtered")
     end_date: str = Field(default=None, description="End date to be filtered")
 
-    def _run(self, action:str, csv_file:str, start_date: str, end_date: list) -> str:
+    def _run(self, action:str, csv_file:str, start_date: str, end_date: str) -> str:
         """
         Execute data extraction actions
         """
