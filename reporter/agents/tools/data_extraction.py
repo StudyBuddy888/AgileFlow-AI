@@ -277,7 +277,7 @@ class JiraDataExtraction(BaseTool):
         except Exception:
             return []
 
-    def __create_board_overview(self, parent_issues, base_path="jira_weekly_data"):
+    def __create_board_overview(self, parent_issues, base_path="jira_weekly_data"): #jira-weekly-data
         """Create a pandas DataFrame from parent and child issues and save it as CSV"""
         cleaned_issues = []
 
